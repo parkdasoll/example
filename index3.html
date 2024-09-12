@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{padding: 0; margin: 0;}
+        table{
+            border-collapse: collapse;
+            width: 80%;
+            height: 300px;
+            margin: 100px auto;
+            border: 2px solid #000;
+            /* 기본값
+            display: table - table을 만들어주는 성격
+            box-sizing: border-box (padding,border폭안으로 표현) */
+        }
+        td {
+            border: 1px solid #000;
+            /* 일정한 폭이 생성, 수직상 중앙정렬
+                display : table-cell
+                vertical-align : middle
+            */
+            text-align: center;
+        }
+
+        /* display:table로 변환 > 부모박스(height) */
+        div{
+            width: 80%;
+            height: 300px;
+            margin: 100px auto;
+            border: 2px solid #000;
+            display: table;
+        }
+        p{
+            /* 일반박스상태
+            float: left;
+            border: 1px solid #000;
+            text-align: center;
+            width: 50%;
+            box-sizing: border-box;
+            line-height: 300px; */
+            display: table-cell;    /*td*/
+            vertical-align: middle;
+            border: 1px solid #000;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- table > 표를 만드는 태그 -->
+    <table>
+        <tr> <!--줄-->
+            <td>table-test<br>table-test<br>table-test</td> <!--칸-->
+            <td>table-test<br>table-test<br>table-test</td> <!--칸-->
+        </tr>
+    </table>
+
+    <div>
+        <p>table-display<br>table-display<br>table-display</p>
+        <p>table-display<br>table-display<br>table-display</p>
+        <p>table-display<br>table-display<br>table-display</p>
+        <p>table-display<br>table-display<br>table-display</p>
+    </div>
+</body>
+</html>
